@@ -1,6 +1,6 @@
-let inquirer = requiure('inquirer');
+let inquirer = require('inquirer');
 let fs = require('fs');
-const generateLogo = require('./lib/shapes');
+const generateLogo = require('./lib/generateLogo');
 const { error } = require('console');
 
 const questions = [
