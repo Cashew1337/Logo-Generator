@@ -10,15 +10,15 @@ const questions = [
         name: 'text'
     },
     {
-        type: 'list',
-        message: 'What shape would you like to use for your logo?',
-        name: 'shape',
-        choices: ['triangle', 'circle', 'rectangle']
-    },
-    {
         type: 'input',
         message: 'Please enter a color or color code for the company name.',
         name: 'color'
+    },
+    {
+        type: 'list',
+        message: 'What shape would you like to use for your logo?',
+        name: 'shape',
+        choices: ['triangle', 'circle', 'square']
     },
     {
         type: 'input',
@@ -29,13 +29,16 @@ const questions = [
 
 function writeLogo(answers) {
     console.log(answers);
-    fs.writeFile('logo.svg', answers, (err) => err ? console.error(err) : console.log('Logo generated successfully!'));
+    fs.writeFile('./examples/logo.svg', answers, (err) => err ? console.error(err) : console.log('Logo generated successfully!'));
 }
 
 function init() {
     inquirer
     .prompt(questions)
     .then((answers) => {
+        // if (answers.text > 3) {
+        //     return
+        // }
         writeLogo(generateLogo(answers))
     })
 }
