@@ -34,13 +34,10 @@ function writeLogo(answers) {
 
 function init() {
     inquirer
-    .prompt(questions)
-    .then((answers) => {
-        // if (answers.text > 3) {
-        //     return
-        // }
-        writeLogo(generateLogo(answers))
-    })
+        .prompt(questions)
+        .then((answers) => {
+            writeLogo(generateLogo(answers))
+        })
 }
 
 init()
