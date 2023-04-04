@@ -23,6 +23,8 @@ Once the code is pulled from Github, install inquirer and run node index.js.
 
 Please follow the link below to view a video walkthrough on how to use the program:
 
+https://drive.google.com/file/d/15ZP_M90SzLotH7ei3nPAAeK3-sSgymhd/view
+
 
 ## Questions
 
